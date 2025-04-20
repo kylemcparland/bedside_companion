@@ -1,0 +1,20 @@
+# Node.js
+node_modules/
+dist/
+build/
+*.log
+
+# TypeScript
+*.tsbuildinfo
+*.d.ts
+
+# Vite
+.vite/
+.vite-deps/
+
+# dotenv environment variables
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
