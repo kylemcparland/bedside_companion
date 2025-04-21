@@ -20,7 +20,8 @@ export interface ChatRequestBody {
 
 export interface ChatResponse {
   message: string;
-  keywordMessage: string | null;
+  keywordMessage: Response | null;
+  keywordResource?: Response | null; // optional now
   error?: string;
 }
 

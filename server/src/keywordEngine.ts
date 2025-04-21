@@ -1,4 +1,4 @@
-import { KeywordResponse, ResponseWithLink } from "./types/allTypes";
+import { KeywordResponse, ResponseWithLink } from "../types/backendTypes.ts";
 
 // Keyword + response pairs array:
 const keywordResponses: KeywordResponse[] = [

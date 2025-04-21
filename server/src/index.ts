@@ -2,7 +2,7 @@ import express, { Request, Response } from "express";
 import fetch from "node-fetch";
 import cors from "cors";
 import { checkKeywordTriggers } from "./keywordEngine.ts";
-import { APIResponse, ChatResponse, Patient } from "./types/allTypes.ts";
+import { APIResponse, ChatResponse, Patient } from "../types/backendTypes.ts";
 
 // Express...
 const app = express();
@@ -97,7 +97,7 @@ const chatHandler = async (req: Request, res: Response) => {
       // Construct response object...
       const chatResponse: ChatResponse = {
         message: reply,
-        keywordMessage: keywordMatch ? keywordMatch.text : null,
+        keywordMessage: keywordMatch ? keywordMatch : null,
       };
 
       // Return response object...
