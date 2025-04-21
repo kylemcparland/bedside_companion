@@ -1,19 +1,19 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./ChatComponent.css"; // Reference to the external CSS file
+import "./ChatComponent.css";
 
 import { Message, ResponseWithLink } from "../../types/frontendTypes";
 
 const ChatComponent = () => {
   // State types
-  const [message, setMessage] = useState<string>(""); // string type for message
+  const [message, setMessage] = useState<string>("");
   const [response, setResponse] = useState<ResponseWithLink>({
     message: "",
     keywordMessage: null,
     keywordResource: null,
   }); // ResponseWithLink type for response
-  const [chatHistory, setChatHistory] = useState<Message[]>([]); // Message[] type for chatHistory
-  const [loading, setLoading] = useState<boolean>(false); // boolean type for loading
-  const bottomRef = useRef<HTMLDivElement>(null); // type for bottomRef as HTMLDivElement
+  const [chatHistory, setChatHistory] = useState<Message[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
