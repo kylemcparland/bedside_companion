@@ -4,13 +4,12 @@ import "./ChatComponent.css";
 import { Message, ResponseWithLink } from "../../types/frontendTypes";
 
 const ChatComponent = () => {
-  // State types
   const [message, setMessage] = useState<string>("");
   const [response, setResponse] = useState<ResponseWithLink>({
     message: "",
     keywordMessage: null,
     keywordResource: null,
-  }); // ResponseWithLink type for response
+  }); 
   const [chatHistory, setChatHistory] = useState<Message[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const bottomRef = useRef<HTMLDivElement>(null);
