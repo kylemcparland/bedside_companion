@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "CommonJS",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist",
-    "rootDir": "./src"
+    "module": "ESNext",                        // Use ES Modules
+    "moduleResolution": "node",                // Resolve modules like Node.js
+    "esModuleInterop": true,                   // Handle interoperability between CommonJS and ESM
+    "allowImportingTsExtensions": true,        // Allow .ts imports
+    "target": "ESNext",                        // Use latest JavaScript features
+    "outDir": "./dist",                        // Compile to the dist folder
+    "strict": true,                            // Enable strict type-checking options
+    "noEmit": true                             // Prevent TypeScript from generating output files (since we're using ts-node)
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*"],                     // Include all files in the src folder
+  "exclude": ["node_modules"]                  // Exclude node_modules from compilation
 }
